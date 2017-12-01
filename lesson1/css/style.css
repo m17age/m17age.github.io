@@ -1,0 +1,246 @@
+
+h2{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*Header*/
+
+header{
+	margin-top: 80px;
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 150px;
+}
+
+header h3{
+	font-size: 24px;
+	margin: 0;
+	margin-bottom: 23px;
+}
+
+header h2{
+	margin: 0;
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.banner{
+	margin-top: 85px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;	
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.video img{
+	max-width: 100%;
+}
+
+.email-form{
+	padding: 28px 23px;
+	border: 5px solid blue;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	margin-left: 30px;
+}
+
+@media screen and (max-width: 880px ){
+	.email-form{
+		margin-top: 40px;
+	}
+}
+
+.form-title{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 39px;
+}
+
+.email-form input{
+	padding: 12px;
+	margin-bottom: 10px;
+}
+
+.email-form button{
+	padding: 20px 50px;
+	color: #fff;
+	background-color: #3c3cdd;
+	border: none;
+	cursor: pointer;
+}
+
+/*Cons*/
+
+.cons{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.cons h2{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 80px;
+}
+
+.advantages{
+	margin-bottom: 90px;
+}
+
+.advantages ul{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.advantages ul li{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	margin-left: 100px;
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+
+
+
+@media screen and (max-width: 560px ) {
+
+	.advantages ul{
+		flex-direction: column;
+	}
+
+	.advantages ul li{
+		margin: 0;
+		margin-top: 20px;
+	}
+
+	.advantages ul li:first-child{
+		margin-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 1080px ) {
+	.advantages ul li{
+		flex-basis: 260px;
+	}
+}
+
+.advantages ul li img{
+	width: 70px;
+	margin-bottom: 22px;
+}
+
+.cons button{
+	color: #fff;
+	padding: 18px 50px;
+	background-color: #3c3cdd;
+	border: none;
+	cursor: pointer;
+}
+
+/*Clients*/
+
+.clients{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.clients h2{
+	margin-bottom: 50px;
+}
+
+.clients-photos ul{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.clients-photos ul img{
+	height: 213px;
+}
+
+.clients-photos ul li{
+	margin-left: 25px;
+	margin-bottom: 33px;
+	
+}
