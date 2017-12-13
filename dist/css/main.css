@@ -420,3 +420,8 @@ header .videos dd span {
     height: 100%;
   }
 }
+@media (max-width: 394px) {
+  header h1 {
+    font-size: 35px;
+  }
+}
