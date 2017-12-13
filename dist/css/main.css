@@ -190,6 +190,13 @@ header .videos dd span {
   border: none;
   height: 140px;
   text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 8px 8px 50px #000;
+          box-shadow: 8px 8px 50px #000;
+}
+#learningvar button:hover {
+  background-color: #cdc40d;
 }
 /*Модальные окна*/
 .popup-v,
@@ -248,62 +255,149 @@ header .videos dd span {
       justify-content: space-around;
 }
 /* Меню */
-.menu {
-  z-index: 9;
-  position: absolute;
+.menu-wrapper {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #0909EF;
-  padding: 10px;
-}
-.menu .itemsMenu {
-  text-align: center;
-}
-.menu .itemsMenu li {
   font-size: 2.4rem;
   line-height: 30px;
-  margin-left: 10%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.menu {
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #fff;
+}
+.menu ul {
+  display: table-row;
   list-style: none;
+}
+.menu ul li {
+  display: table-cell;
+}
+.menu ul li:hover {
+  background-color: #125bdf;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.menu ul li a {
+  width: 100%;
   display: inline-block;
-}
-.menu .itemsMenu li a {
-  padding: 5px;
+  text-align: center;
+  color: #FFF;
+  line-height: 50px;
   text-decoration: none;
-  color: #fff;
+  text-transform: uppercase;
+  border-right: 1px solid #fff;
 }
-.menu .itemsMenu li a:hover {
-  background-color: #0DE2F5;
+.menu ul li a:hover {
+  color: #E3EB0C;
 }
-.menu .itemsMenu li:first-child {
-  margin-left: 0;
+.menu ul li:last-child a {
+  border-right: none;
 }
-.iconMenu {
-  display: none;
+#sandwich {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
   cursor: pointer;
+  margin: auto;
+  display: none;
 }
-@media (max-width: 820px) {
+.sw_top {
+  position: relative;
+  top: 0;
+  width: 50px;
+  height: 5px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: top 0.2s, -webkit-transform 0.5s;
+  transition: top 0.2s, -webkit-transform 0.5s;
+  transition: transform 0.5s, top 0.2s;
+  transition: transform 0.5s, top 0.2s, -webkit-transform 0.5s;
+  /* transition-delay: 0.2s, 0s; */
+}
+.sw_bottom {
+  position: relative;
+  width: 50px;
+  height: 5px;
+  top: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: top 0.2s, -webkit-transform 0.5s;
+  transition: top 0.2s, -webkit-transform 0.5s;
+  transition: transform 0.5s, top 0.2s;
+  transition: transform 0.5s, top 0.2s, -webkit-transform 0.5s;
+  -webkit-transition-delay: 0.2s, 0s;
+          transition-delay: 0.2s, 0s;
+}
+.sw_footer {
+  position: relative;
+  width: 50px;
+  height: 5px;
+  top: 20px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+#sandwich.active .sw_top {
+  top: 15px;
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+#sandwich.active .sw_bottom {
+  top: 10px;
+  -webkit-transform: rotate(-140deg);
+          transform: rotate(-140deg);
+}
+#sandwich.active .sw_footer {
+  opacity: 0;
+  top: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .menu-wrapper {
+    position: fixed;
+    z-index: 99;
+  }
   .menu {
-    padding: 0;
-    background-color: #fff;
-  }
-  .itemsMenu {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
     display: none;
-    background-color: #0DE2F5;
+    position: absolute;
+    border-bottom: none;
   }
-  .iconMenu {
-    display: inline-block;
-    background-color: none;
+  .menu ul {
+    display: block;
   }
-}
-@media (max-width: 647px) {
-  .itemsMenu {
-    text-align: center;
+  .menu ul li {
+    display: block;
   }
-  .itemsMenu li {
-    text-align: center;
-    display: inline-block;
-    margin-left: 0;
+  .menu ul li a {
+    border-bottom: 1px solid #fff;
+    display: block;
+    border-right: none;
+  }
+  .menu ul li:last-child a {
+    border-right: none;
+  }
+  #sandwich {
+    z-index: 99;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: block;
   }
 }
 /* Медиа запросы */
