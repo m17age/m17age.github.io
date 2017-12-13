@@ -13,17 +13,23 @@
 		<div class="container">
 			<div class="row">
 				
-					
-						<nav class="menu">
-						<div class="iconMenu"><img src="img/icons/iconmenu.png" alt="Иконка меню" /></div>
-						<div class="itemsMenu">
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Вакуумная формовка</a></li>
-							<li><a href="#">Прессформы обуви</a></li>
+					<!-- Меню -->
+						<div class="menu-wrapper">
+							<nav class="menu">
+									<ul>
+										<li><a href="">О нас</a></li>
+										<li><a href="">Вакуумная формовка</a></li>
+										<li><a href="">Прессформы обуви</a></li>
+									</ul>
+								</nav>
 						</div>
-					</nav>
-				
-				
+
+				<div id="sandwich">
+				  <div class="sw_top"></div>
+				  <div class="sw_bottom"></div>
+				  <div class="sw_footer"></div>
+				</div>
+				<!-- Конец меню -->
 				<header>
 					<h1 class="col-md-10 col-md-offset-1">Готовый бизнес, производство изделий из акрилового литьевого мрамора</h1>
 					<div class="add col-md-8 col-md-offset-2">Столешниц, кухонных моек, раковин и матриц (форм) </div>
@@ -292,9 +298,24 @@ $(".btn-cex").on('click', function(event) {
 	$(".popup-c").fadeIn();
 });
 
-$(".iconMenu").on('click', function(event) {
-	event.preventDefault();
-	$(".itemsMenu").toggle("fast");
+var men=true;
+
+$("#sandwich").click(function()
+{
+	if(men==false)
+	{
+		$(".menu").slideUp();
+		men=!men;
+	}
+	else
+	{
+		$(".menu").slideDown();
+		men=!men;
+	}
+});
+
+	$("#sandwich, .menu_item").click(function() {
+     $("#sandwich").toggleClass("active");
 });
 
 	});
